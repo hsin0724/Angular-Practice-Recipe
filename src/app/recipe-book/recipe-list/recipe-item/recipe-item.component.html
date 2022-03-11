@@ -1,0 +1,22 @@
+<!-- 註解掉(click)="clickList()"  -->
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+
+    <div class="pull-left">
+      <h4 class="list-group-item-hearding">{{ itemElement.name }}</h4>
+      <p class="list-group-item-text">{{ itemElement.description}}</p>
+    </div>
+
+    <span class="pull-right">
+      <!-- src="{{ recipe.imagePath }} 寫法也可以" -->
+      <img
+        [src]="itemElement.imagePath"
+        alt="{{ itemElement.name }}"
+        class="img-responsive"
+        style="width: 130px; height: 100px;background-size: cover;">
+    </span>
+
+</a>

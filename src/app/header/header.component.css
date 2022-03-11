@@ -1,0 +1,11 @@
+.navbar-nav li{
+  cursor: pointer;
+}
+
+.dropdown-menu{
+  padding: 0;
+}
+
+.dropdown-menu li a{
+  padding: 8px 20px;
+}

@@ -1,0 +1,67 @@
+<!-- 食譜詳細內容 -->
+
+<!-- 食譜圖片 -->
+<div class="row">
+  <div class="col-xs-12">
+    <img
+    [src]="recipe.imagePath"
+    alt="{{ recipe.name }}"
+    class="img-responsive"
+    style="width: 350px; height: 300px;background-size: container;margin-bottom: 5px;">
+  </div>
+</div>
+
+<!-- 食譜名稱 -->
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+
+<!-- <span class="pull-light">
+</span> -->
+
+<!-- 管理食譜 -->
+<div class="row">
+  <div class="col-xs-12">
+
+    <div appDropdown class="btn-group" >
+
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Recipe
+          <span class="caret">
+
+          </span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddToShoppingList()">To shopping List</a></li>
+        <li><a (click)="onEditRecipe()">Edit Recipe</a></li>
+        <li><a >Delete Recipe</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    {{recipe.description}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.ingredientName }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div>
+

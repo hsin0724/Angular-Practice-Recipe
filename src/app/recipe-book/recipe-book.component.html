@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-5">
+    <!-- (recipeWasSelected)="selectedRecipe = $event 把判斷寫在html也可以" -->
+    <!-- we don't have to build this complex chain of events and property binding.移除使用@Output的方式做databinding，反之使用Service做溝通 -->
+    <!-- <app-recipe-list (recipeWasSelected)="recipeWasSelected($event)"></app-recipe-list> -->
+
+    <app-recipe-list></app-recipe-list>
+
+  </div>
+
+  <div class="col-md-7">
+
+    <!-- 1.使用路由顯示 -->
+    <router-outlet></router-outlet>
+
+    <!-- 2.ngIf判斷是否有點擊食譜list，有的話才會顯示detail,無的話顯示請選擇食譜list -->
+    <!-- <app-recipe-detail
+    *ngIf="selectedRecipe, else noinfo"
+    [recipe]="selectedRecipe"></app-recipe-detail>
+
+    <ng-template #noinfo>
+      <p> Please select a Recipe!</p>
+    </ng-template> -->
+
+  </div>
+
+</div>

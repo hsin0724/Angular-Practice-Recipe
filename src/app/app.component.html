@@ -1,0 +1,16 @@
+<app-header></app-header>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <!-- 使用router切換分頁 -->
+      <router-outlet></router-outlet>
+
+      <!-- 使用ngIf切換分頁 -->
+      <!-- <app-recipe-book *ngIf="this.loadeText === 'recipe'"></app-recipe-book>
+      <app-shopping-list *ngIf="this.loadeText !== 'recipe'"></app-shopping-list> -->
+
+    </div>
+  </div>
+</div>

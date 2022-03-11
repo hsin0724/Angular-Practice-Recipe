@@ -1,0 +1,44 @@
+<div class="navbar navbar-default">
+
+  <!-- container-fluid > 寬度滿版的container -->
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <!-- navbar-brand > navbar裡左上LOGO位置 -->
+      <a href="#" class="navbar-brand">Recipe Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+
+      <!-- 使用router切換分頁 -->
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="/recipes" >Recipes</a></li>
+        <li  routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+      </ul>
+
+
+      <!-- 使用ngIf切換分頁 -->
+      <!-- <ul class="nav navbar-nav">
+        <li><a (click)="onSelect('recipe')">Recipes</a></li>
+        <li><a (click)="onSelect('shopping-list')">Shopping List</a></li>
+      </ul> -->
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li  appDropdown class="dropdown">
+          <!-- 需要一個點擊下拉選單的按鈕，ul裡都是內容 ; dropdown-toggle > 折疊式的切換點-->
+          <a class="dropdown-toggle" role="button">Manage
+            <!-- caret > 下拉箭頭 -->
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a>Save Data</a></li>
+            <li><a>Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</div>
